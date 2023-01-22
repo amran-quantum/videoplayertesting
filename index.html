@@ -13,7 +13,8 @@
     <script>
         var interval = setInterval(function(){
           var countForVideo = document.getElementById('video').readyState;
-          if(countForVideo == 4){
+            console.log(countForVideo)
+            if(countForVideo == 4){
               console.log("ready to play")
             document.getElementById('video').play();
             clearInterval(interval);
