@@ -7,13 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <video height="200" width="200" id="video" loop muted playsinline controls="false">
+    <video height=auto loop width="200" id="video" muted playsinline controls>
         <source src="https://api.tenrol.com/uploads/videos/159_159_1652901854.mp4">
     </video>
     <script>
         var interval = setInterval(function(){
           var countForVideo = document.getElementById('video').readyState;
-            console.log(countForVideo)
+            console.log(countForVideo);
+            
             if(countForVideo == 4){
               console.log("ready to play")
             document.getElementById('video').play();
