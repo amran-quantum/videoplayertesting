@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,4 +23,37 @@
         },2000);
     </script>
  </body>
+</html> -->
+
+
+<!doctype html>
+<html>
+<head>
+    <title>JavaScript Progress Monitor</title>
+    <script type="text/javascript">
+        function getPercentProg() {
+            var myVideo = document.getElementsByTagName('video')[0];
+            var endBuf = myVideo.buffered.end(0);
+            var soFar = parseInt(((endBuf / myVideo.duration) * 100));
+            document.getElementById("loadStatus").innerHTML =  soFar + '%';
+        }
+       function myAutoPlay() {
+           var myVideo = document.getElementsByTagName('video')[0];
+           myVideo.play();
+       }
+       function addMyListeners(){
+           var myVideo = document.getElementsByTagName('video')[0];
+           myVideo.addEventListener('progress', getPercentProg, false);
+           myVideo.addEventListener('canplaythrough', myAutoPlay, false);
+       }
+    </script>
+</head>
+<body onload="addMyListeners()">
+    <div>
+        <video controls
+               src="https://api.tenrol.com/uploads/videos/159_159_1652901854.mp4">
+        </video>
+        <p id="loadStatus">MOVIE LOADING...</p>
+    </div>
+</body>
 </html>
