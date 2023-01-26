@@ -7,15 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-<!--     <video preload=auto height=auto loop width="100%" id="video" muted playsinline controls>
-        <source src="https://api.tenrol.com/uploads/videos/159_159_1652901854.mp4">
-    </video> -->
-    <video id="video" preload="metadata" autoplay="" loop="" muted="" >
-      <!-- for safari or iOS or anything Apple -->
-      <source src="https://api.tenrol.com/uploads/videos/159_159_1652901854.mp4" type="video/x-m4v">
-<!--       <!-- for chrome, firefox, android and remainig friends -->
-      <source src="https://api.tenrol.com/uploads/videos/159_159_1652901854.mp4" type="video/mp4"> -->
+    <video preload=auto height=auto loop width="100%" id="video" muted playsinline controls>
+        <source src="https://bgrins.github.io/videoconverter.js/demo/bigbuckbunny.webm" type="type/webm">
     </video>
+    
     <script>
         var interval = setInterval(function(){
           var countForVideo = document.getElementById('video').readyState;
