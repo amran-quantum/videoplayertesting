@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <video id="video" preload=auto height="100% loop width="100%" id="video" muted playsinline controls>
-        <source src="https://bgrins.github.io/videoconverter.js/demo/bigbuckbunny.webm" type="type/webm">
-    </video>
-    
+     
     <script>
         var interval = setInterval(function(){
           var countForVideo = document.getElementById('video').readyState;
@@ -23,6 +18,13 @@
           }
         },2000);
     </script>
+</head>
+<body onload="addMyListeners()">
+    <div>
+        <video id="video" preload=auto height="100% loop width="100%" id="video" muted playsinline controls>
+           <source src="https://bgrins.github.io/videoconverter.js/demo/bigbuckbunny.webm" type="type/webm">
+        </video>
+    </div>
  </body>
 </html>
 
